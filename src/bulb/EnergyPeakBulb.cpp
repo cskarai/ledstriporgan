@@ -1,8 +1,8 @@
 /*
- * AmplitudePeakBulb.cpp
+ * EnergyPeakBulb.cpp
  */
 
-#include "AmplitudePeakBulb.h"
+#include <EnergyPeakBulb.h>
 #include "BackgroundBulb.h"
 
 #define PEAK_DECREASE    3
@@ -10,13 +10,13 @@
 #define ENERGY_LIMIT     30
 #define AVG_ENERGY_LIMIT 40
 
-AmplitudePeakBulb::AmplitudePeakBulb()
+EnergyPeakBulb::EnergyPeakBulb()
 {
 	for(int i=0; i < ENERGY_HISTORY_WINDOW; i++)
 		energyHistory[i] = 0xFFFFF;
 }
 
-void AmplitudePeakBulb::addToHistory(uint32_t energy)
+void EnergyPeakBulb::addToHistory(uint32_t energy)
 {
 	energyHistory[energyHistoryPtr] = energy;
 	if( ++energyHistoryPtr == ENERGY_HISTORY_WINDOW )
@@ -46,7 +46,7 @@ void AmplitudePeakBulb::addToHistory(uint32_t energy)
 		energyMin++;
 }
 
-void AmplitudePeakBulb::processNewFrame(AudioAnalyzer & analyzer)
+void EnergyPeakBulb::processNewFrame(AudioAnalyzer & analyzer)
 {
 	peakMax = (peakMax * 127) / 128;
 
@@ -68,7 +68,7 @@ void AmplitudePeakBulb::processNewFrame(AudioAnalyzer & analyzer)
 	variantBackgroundColor = scale( BackgroundBulb::getColor(), peakEnergy );
 }
 
-uint32_t AmplitudePeakBulb::getColor(uint32_t variant)
+uint32_t EnergyPeakBulb::getColor(uint32_t variant)
 {
 	if( variant & 16 ) {
 		return variantWhiteColor;

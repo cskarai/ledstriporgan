@@ -1,14 +1,14 @@
 /*
- * AmplitudeBulb.cpp
+ * EnergyBulb.cpp
  */
 
-#include "AmplitudeBulb.h"
+#include <EnergyBulb.h>
 #include "BackgroundBulb.h"
 
 #define ENERGY_LIMIT     12
 #define ENERGY_SCALE     12
 
-void AmplitudeBulb::processNewFrame(AudioAnalyzer & analyzer)
+void EnergyBulb::processNewFrame(AudioAnalyzer & analyzer)
 {
 	uint32_t energy = analyzer.getEnergy() * 2 / ENERGY_SCALE;
 	if( energy < ENERGY_LIMIT )
@@ -20,7 +20,7 @@ void AmplitudeBulb::processNewFrame(AudioAnalyzer & analyzer)
 	variantBackgroundColor = scale( BackgroundBulb::getColor(), energy );
 }
 
-uint32_t AmplitudeBulb::getColor(uint32_t variant)
+uint32_t EnergyBulb::getColor(uint32_t variant)
 {
 	if( variant & 16 ) {
 		return variantWhiteColor;

@@ -2,10 +2,10 @@
  * Bulbs.cpp
  */
 
+#include <EnergyBulb.h>
+#include <EnergyPeakBulb.h>
 #include "Bulbs.h"
 #include "BackgroundBulb.h"
-#include "AmplitudeBulb.h"
-#include "AmplitudePeakBulb.h"
 #include "RGBBulb.h"
 #include "SpectralPeakBulb.h"
 #include "BassPeakBulb.h"
@@ -22,8 +22,8 @@ Bulbs bulbs;
 
 void Bulbs::init() {
 	bulbHandler[BULB_KIND_BACKGROUND]      = new BackgroundBulb();
-	bulbHandler[BULB_KIND_AMPLITUDE]       = new AmplitudeBulb();
-	bulbHandler[BULB_KIND_AMPLITUDE_PEAK]  = new AmplitudePeakBulb();
+	bulbHandler[BULB_KIND_AMPLITUDE]       = new EnergyBulb();
+	bulbHandler[BULB_KIND_AMPLITUDE_PEAK]  = new EnergyPeakBulb();
 	bulbHandler[BULB_KIND_RGB]             = new RGBBulb();
 	bulbHandler[BULB_KIND_SPECTRAL_PEAK]   = new SpectralPeakBulb();
 	bulbHandler[BULB_KIND_BASS_PEAK]       = new BassPeakBulb();

@@ -1,15 +1,15 @@
 /*
- * AmplitudePeakBulb.h
+ * EnergyPeakBulb.h
  */
 
-#ifndef BULB_AMPLITUDEPEAKBULB_H_
-#define BULB_AMPLITUDEPEAKBULB_H_
+#ifndef BULB_ENERGYPEAKBULB_H_
+#define BULB_ENERGYPEAKBULB_H_
 
 #include "AbstractBulb.h"
 
 #define  ENERGY_HISTORY_WINDOW  20
 
-class AmplitudePeakBulb : public AbstractBulb
+class EnergyPeakBulb : public AbstractBulb
 {
 private:
 	uint32_t         energyHistory[ENERGY_HISTORY_WINDOW];
@@ -27,7 +27,7 @@ private:
 
 
 public:
-	AmplitudePeakBulb();
+	EnergyPeakBulb();
 
 	virtual void     processNewFrame(AudioAnalyzer & analyzer);
 	virtual uint32_t getColor(uint32_t variant);
@@ -35,4 +35,4 @@ public:
 
 
 
-#endif /* BULB_AMPLITUDEPEAKBULB_H_ */
+#endif /* BULB_ENERGYPEAKBULB_H_ */

@@ -1,13 +1,13 @@
 /*
- * AmplitudeBulb.h
+ * EnergyBulb.h
  */
 
-#ifndef BULB_AMPLITUDEBULB_H_
-#define BULB_AMPLITUDEBULB_H_
+#ifndef BULB_ENERGYBULB_H_
+#define BULB_ENERGYBULB_H_
 
 #include "AbstractBulb.h"
 
-class AmplitudeBulb : public AbstractBulb
+class EnergyBulb : public AbstractBulb
 {
 private:
 	uint32_t         variantBackgroundColor = 0;
@@ -22,4 +22,4 @@ public:
 
 
 
-#endif /* BULB_AMPLITUDEBULB_H_ */
+#endif /* BULB_ENERGYBULB_H_ */
