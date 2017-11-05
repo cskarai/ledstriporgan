@@ -65,7 +65,7 @@ void EnergyPeakBulb::processNewFrame(AudioAnalyzer & analyzer)
 	}
 
 	variantWhiteColor = scale( COLOR_WHITE, peakEnergy );
-	variantBackgroundColor = scale( BackgroundBulb::getColor(), peakEnergy );
+	variantBackgroundColor = scale( lighten( BackgroundBulb::getColor(), 150 ), peakEnergy );
 }
 
 uint32_t EnergyPeakBulb::getColor(uint32_t variant)

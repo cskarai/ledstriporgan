@@ -17,7 +17,7 @@ void EnergyBulb::processNewFrame(AudioAnalyzer & analyzer)
 		energy -= ENERGY_LIMIT;
 
 	variantWhiteColor = scale( COLOR_WHITE, energy );
-	variantBackgroundColor = scale( BackgroundBulb::getColor(), energy );
+	variantBackgroundColor = scale( lighten( BackgroundBulb::getColor(), 150 ), energy );
 }
 
 uint32_t EnergyBulb::getColor(uint32_t variant)
