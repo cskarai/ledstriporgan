@@ -48,11 +48,11 @@ The background LEDs give permanent light and change color when STM32 detects bea
 
 ### Schema
 
-TODO
+![Schema](docs/schema.png)
 
 ### PCB design
 
-TODO
+![PCB Design](docs/pcb_design.png)
 
 ### Photos
 
