@@ -101,7 +101,7 @@ void Bulbs::newBulb() {
 				break;
 			}
 
-		}while( (oldBulb.handler == lastBulb.handler) && (oldBulb.variant == lastBulb.variant) );
+		}while( oldBulb.handler == lastBulb.handler );
 	}
 
 	if( ++bulbFirstPtr == NEOPIXEL_LEDS )
