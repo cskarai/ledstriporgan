@@ -9,11 +9,22 @@
     * [Schema](#schema)
     * [PCB design](#pcb-design)
     * [Photos](#photos)
-  * [Implementation details](#implementation-details)
+  * [Usage](#usage)
+    * [Compiling and installing](#compiling-and-installing)
+    * [Ground-loop switch](#ground-loop-switch)
+    * [Choosing the right volume](#choosing-the-right-volume)
+  * [Signal processing](#signal-processing)
+    * [Sampling and frames](#sampling-and-frames)
+    * [Energy calculation](#energy-calculation)
+    * [Spectral analysis (FFT)](#spectral-analysis-FFT-)
+    * [Digital low pass filtering (bass)](#digital-low-pass-filtering-bass-)
+    * [Beat detection](#beat-detection)
+  * [Debugging](#debugging)
+
 
 ## Introduction
 
-The project is a LED Strip Light Organ implementation using STM32.
+The project is a LED Strip Light Organ implementation using STM32 (blue pill).
 
 When I was a kid we organized fantastic dance parties using a stroboscope created one of my friend. This was a simple circuit switching 3 lamps, that were turned on/off when a frequency was over/under a threshold value. There were 3 potentiometers for the 3 lamps for configuring this threshold.
 This was the 90's, but nowadays much better equipments can be made from fewer money. One can program anything he wants and use not only 3 lamps, but arbitrary number of LEDs.
@@ -58,6 +69,47 @@ The background LEDs give permanent light and change color when STM32 detects bea
 
 TODO
 
-## Implementation details
+## Usage
+
+### Compiling and installing
+
+The project uses the Eclipse environment, GNU ARM Eclipse plugin and openocd for development. The code can be uploaded with ST-LINK after compilation.
+
+The STM32F103 MCU (blue pill board) is used for audio sampling:
+
+![Blue pill](docs/images/blue_pill.png)
+
+### Ground-loop switch
+
+The grounds of audio and STM32 is connected if the swich is on state. It's important if audio and LED strip power sources are isolated.
+If the same equipment provides power for audio and for the strip, the switch has to be turned off to prevent ground loops.
+
+### Choosing the right volume
+
+The code can't figure out whether the music is quiet or the volume is turned down. This LED strip requires adjusting the volume level to reach the best quality. The strip produces the nicest result when the volume is between the [-1.5V,1.5V] range with no distortion. I use 95% volume level. This is not a big restriction as one can buy cheap USB sound cards and set different volume on the USB card and on the speakers.
+
+## Signal processing
+
+### Sampling and frames
+
+TODO
+
+### Energy calculation
+
+TODO
+
+### Spectral analysis (FFT)
+
+TODO
+
+### Digital low pass filtering (bass)
+
+TODO
+
+### Beat detection
+
+TODO
+
+## Debugging
 
 TODO
