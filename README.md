@@ -113,7 +113,7 @@ Each bulb on is controlled by frames created from 128-sample chunks.
 
 ### Mono conversion
 
-For easier handling the tool converts 44.1 kHz stereo music into mono using the following formula:
+For easier handling the tool converts 44.1 kHz stereo music to mono using the following formula:
 
 ![Mono](docs/images/math_mono.png)
 
