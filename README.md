@@ -10,7 +10,7 @@
   * [Circuit Diagram](#circuit-diagram)
     * [Schema](#schema)
     * [PCB design](#pcb-design)
-    * [Photos](#photos)
+    * [Photos of the home made board](#photos-of-the-home-made-board)
   * [Usage](#usage)
     * [Compiling and installing](#compiling-and-installing)
     * [Ground-loop switch](#ground-loop-switch)
@@ -67,28 +67,21 @@ The background LEDs give permanent light and change color when STM32 detects bea
 
 ![PCB Design](docs/pcb_design.png)
 
-### Photos
+### Photos of the home made board
 
-The enclosure:
+How it looks like:
 
-![Enclosure1](docs/images/photo_enclosure1.png)
-
-![Enclosure2](docs/images/photo_enclosure2.png)
+ [![Enclosure2](docs/images/thm_photo_enclosure2.png)](docs/images/photo_enclosure2.png) [![Enclosure1](docs/images/thm_photo_enclosure1.png)](docs/images/photo_enclosure1.png)
 
 
+If I open the case:
 
-Inside:
-
-![Inside](docs/images/photo_inside.png)
-
+[![Inside](docs/images/thm_photo_inside.png)](docs/images/photo_inside.png)
 
 
 The PCB:
 
-![PCB top](docs/images/photo_pcb_top.png)
-
-
-![PCB bottom](docs/images/photo_pcb_bottom.png)
+[![PCB top](docs/images/thm_photo_pcb_top.png)](docs/images/photo_pcb_top.png) [![PCB bottom](docs/images/thm_photo_pcb_bottom.png)](docs/images/photo_pcb_bottom.png)
 
 ## Usage
 
