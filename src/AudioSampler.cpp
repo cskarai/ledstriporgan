@@ -193,7 +193,7 @@ void AudioSampler::startSampling() {
 void AudioSampler::handleIrq(uint32_t state) {
 #if defined(DEBUG)
 	if( hasData() ) {
-		//asm volatile ("bkpt 0");
+		asm volatile ("bkpt 0");
 	}
 #endif
 
