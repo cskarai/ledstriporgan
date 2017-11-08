@@ -67,7 +67,26 @@ The background LEDs give permanent light and change color when STM32 detects bea
 
 ### Photos
 
-TODO
+The enclosure:
+
+![Enclosure1](docs/images/photo_enclosure1.png)
+
+![Enclosure2](docs/images/photo_enclosure2.png)
+
+
+
+Inside:
+
+![Inside](docs/images/photo_inside.png)
+
+
+
+The PCB:
+
+![PCB top](docs/images/photo_pcb_top.png)
+
+
+![PCB bottom](docs/images/photo_pcb_bottom.png)
 
 ## Usage
 
