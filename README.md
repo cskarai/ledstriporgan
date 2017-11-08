@@ -17,6 +17,7 @@
     * [Choosing the right volume](#choosing-the-right-volume)
   * [Signal processing](#signal-processing)
     * [Sampling and frames](#sampling-and-frames)
+    * [Mono conversion](#mono-conversion)
     * [Energy calculation](#energy-calculation)
     * [Spectral analysis (FFT)](#spectral-analysis-FFT-)
     * [Digital low pass filtering (bass)](#digital-low-pass-filtering-bass-)
@@ -106,15 +107,50 @@ The code can't figure out whether the music is quiet or the volume is turned dow
 
 ### Sampling and frames
 
-TODO
+The circuit samples stereo music on the audio jack at 44100 Hz, using ADC1 and ADC2 on STM32.
+
+Each bulb on is controlled by frames created from 128-sample chunks.
+
+### Mono conversion
+
+For easier handling the tool converts 44.1 kHz stereo music into mono using the following formula:
+
+![Mono](docs/images/math_mono.png)
 
 ### Energy calculation
 
-TODO
+The energy of the frame is calculated from the sample average:
+
+![Sample avg](docs/images/math_avg.png)
+
+  * s[i] is the value of the sampled music
+  * i0 is the start sample index of the frame
+
+<br/>
+
+The following formula will give the energy:
+
+![Sample avg](docs/images/math_energy.png)
+
+This value is used for calculating the LED intensity of 'energy bulb' and 'energy peak bulb'.
 
 ### Spectral analysis (FFT)
 
-TODO
+The code transforms the 128-sample frames to frequency domain using FFT.
+The sampling frequency is 44100Hz, the spectral resolution is 44100/128 = 344 Hz (the complete domain is splitted into 64 bands by 344Hz).
+
+Grouping the bands:
+
+| Group |  Bands |      Frequency      |
+|:------:|:------:|:-------------------:|
+|   1    |    1   |   344 Hz - 689 Hz   |
+|   2    |   2-3  |   689 Hz - 1378 Hz  |
+|   3    |   4-7  |  1378 Hz - 2756 Hz  | 
+|   4    |  8-15  |  2756 Hz - 5513 Hz  | 
+|   5    | 16-31  |  5513 Hz - 11025 Hz | 
+|   6    | 32-63  | 11025 Hz - 22050 Hz | 
+
+The LED intensity of 'spectral peak bulb' and 'rgb bulb' is computed from the frequency groups.
 
 ### Digital low pass filtering (bass)
 
