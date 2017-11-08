@@ -5,10 +5,12 @@
 #include <EnergyPeakBulb.h>
 #include "BackgroundBulb.h"
 
-#define PEAK_DECREASE    3
+#define PEAK_DECREASE        3
 
-#define ENERGY_LIMIT     30
-#define AVG_ENERGY_LIMIT 40
+#define ENERGY_LIMIT        30
+#define AVG_ENERGY_LIMIT    40
+
+#define MAGNITUDE_DIVISOR   19
 
 EnergyPeakBulb::EnergyPeakBulb()
 {
@@ -58,7 +60,7 @@ void EnergyPeakBulb::processNewFrame(AudioAnalyzer & analyzer)
 	uint32_t magnitude = 256 * energy / energyMin;
 
 	if( (energy > ENERGY_LIMIT) && ( magnitude > peakMax ) ) {
-		peakEnergy = magnitude / 5;
+		peakEnergy = magnitude / MAGNITUDE_DIVISOR;
 		if( peakEnergy > 255 )
 			peakEnergy = 255;
 		peakMax = magnitude;
