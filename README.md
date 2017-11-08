@@ -1,5 +1,7 @@
 # LED Strip Organ
 
+[Hungarian translation - magyar fordítás](OLVASSEL.md)
+
 ## Table of Contents
   * [Introduction](#introduction)
   * [Controlling the LEDs (bulbs)](#controlling-the-leds-bulbs-)
