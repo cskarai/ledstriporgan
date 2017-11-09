@@ -92,6 +92,7 @@ void UartDebug::sendDebugInfo()
 	uartPacket.avg = (uint16_t)audioAnalyzer.getAvg();
 	uartPacket.bassStrength = (uint16_t)audioAnalyzer.getBassStrength();
 	uartPacket.flags = beatDetector.getBeatState() & FLAG_BEAT_STATE_MASK;
+	uartPacket.bassCurve = (uint16_t)audioAnalyzer.getBassCurve();
 
 	if( beatDetector.isBeat() )
 		uartPacket.flags |= FLAG_BEAT;

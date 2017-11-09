@@ -54,6 +54,9 @@ while(1)
   last if sysread(FH , $buf , 2) != 2;
   my $bassStrength = unpack("s", $buf);
 
+  last if sysread(FH , $buf , 2) != 2;
+  my $bassCurve = unpack("s", $buf);
+
   last if sysread(FH , $buf , 64) != 64;
   my @data = ();
   
@@ -63,7 +66,8 @@ while(1)
   }
 
   my %frame = (frame => $frame, avg => $avg, flags => $flags, 
-               bassStrength => $bassStrength, data => \@data,);
+               bassStrength => $bassStrength, bassCurve => $bassCurve,
+               data => \@data,);
   
   push @frames, \%frame;
 }
@@ -81,12 +85,12 @@ for my $frame (@frames)
 
 close($wh);
 
-$wh = create_wav("2_avg.wav");
+$wh = create_wav("2_bass_curve.wav");
 
 for my $frame (@frames)
 {
   for(my $i=0; $i < 32; $i++) {
-    print $wh pack("s", ($frame->{avg} - 2048) * 16);
+    print $wh pack("s", ($frame->{bassCurve} - 2048) * 16);
   }
 }
 

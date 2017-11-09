@@ -16,6 +16,7 @@ typedef struct {
 	uint8_t  frame;
 	uint8_t  flags;
 	uint16_t bassStrength;
+	uint16_t bassCurve;
 	uint16_t samples[32];
 } UartPacket;
 

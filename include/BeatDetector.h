@@ -11,7 +11,7 @@
 #include <inttypes.h>
 #include "AudioAnalyzer.h"
 
-#define HISTORY_WINDOW_SIZE 128
+#define HISTORY_WINDOW_SIZE 256
 
 typedef enum  {
   NO_BEAT=0,

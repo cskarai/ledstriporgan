@@ -7,6 +7,12 @@
 #include "fix_fft.h"
 #include <string.h>
 
+#if BASS_FRAME_SIZE < 128 || BASS_FRAME_SIZE > 255
+#error BASS_FRAME_SIZE must be between 128 and 255
+#endif
+
+#define BASS_REMNANT_SIZE (256 - BASS_FRAME_SIZE)
+
 AudioAnalyzer audioAnalyzer;
 
 
@@ -29,6 +35,9 @@ void AudioAnalyzer::processData(uint32_t * data, uint32_t count)
 {
 	leftAvg = rightAvg = 0;
 
+	bassCurve = bassRemnant;
+	bassRemnant = 0;
+
 	for(uint32_t i=0; i < count; i++) {
 
 		uint32_t left = data[i] >> 16;
@@ -37,11 +46,17 @@ void AudioAnalyzer::processData(uint32_t * data, uint32_t count)
 		leftAvg += left;
 		rightAvg += right;
 
-		samples[i] = (left + right)>>1;
+		uint32_t mid = (left + right)>>1;
+		samples[i] = mid;
+
+		bassCurve += mid;
+		if( i >= BASS_REMNANT_SIZE )
+			bassRemnant += mid;
 	}
 
 	leftAvg /= count;
 	rightAvg /= count;
+	bassCurve /= BASS_FRAME_SIZE;
 
 	leftEnergy = rightEnergy = 0;
 
@@ -64,7 +79,7 @@ void AudioAnalyzer::processData(uint32_t * data, uint32_t count)
 	frameNumber++;
 
 	avg = (leftAvg + rightAvg) / 2;
-	bassWindow[bassWindowPtr++] = avg;
+	bassWindow[bassWindowPtr++] = bassCurve;
 	if( bassWindowPtr == BASS_WINDOW_SIZE)
 		bassWindowPtr = 0;
 

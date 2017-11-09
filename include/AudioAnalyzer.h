@@ -9,7 +9,8 @@
 #include "AudioSampler.h"
 
 #define WINDOW_SIZE           50
-#define BASS_WINDOW_SIZE      15
+#define BASS_WINDOW_SIZE      20
+#define BASS_FRAME_SIZE      170
 #define MAX_BANDS              6
 
 class AudioAnalyzer
@@ -27,6 +28,8 @@ private:
 	uint32_t      avg = 0;
 
 	uint32_t      bassStrength = 0;
+	uint32_t      bassCurve = 0;
+	uint32_t      bassRemnant = 0;
 
 	uint32_t      energy = 0;
 
@@ -63,6 +66,7 @@ public:
 	uint16_t getFFTBand(int band) { return fftBand[band]; }
 
 	uint32_t getBassStrength() { return bassStrength; }
+	uint32_t getBassCurve() { return bassCurve; }
 
 	uint16_t * getSamples() { return samples; }
 };

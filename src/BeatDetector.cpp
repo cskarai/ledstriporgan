@@ -8,8 +8,8 @@ BeatDetector beatDetector;
 
 #define BEAT_FALL_INCREASE      5
 #define BEAT_MIN_DISTANCE      30
-#define BEAT_MIN_STRENGTH     400
-#define BEAT_MIN_OVERHEAD    0x20
+#define BEAT_MIN_STRENGTH     300
+#define BEAT_MIN_OVERHEAD    0x1C
 #define BEAT_HYSTERESIS       100
 #define BEAT_MAX_RISE_TIME      8
 
