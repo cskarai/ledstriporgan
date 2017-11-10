@@ -4,7 +4,7 @@
 
 ## Table of Contents
   * [Introduction](#introduction)
-  * [Controlling the LEDs (bulbs)](#controlling-the-leds-bulbs-)
+  * [Controlling the LEDs (bulbs)](#controlling-the-leds-bulbs)
     * [Background bulb](#background-bulb)
     * [Effect bulbs](#effect-bulbs)
   * [Circuit Diagram](#circuit-diagram)
@@ -19,8 +19,8 @@
     * [Sampling and frames](#sampling-and-frames)
     * [Mono conversion](#mono-conversion)
     * [Energy calculation](#energy-calculation)
-    * [Spectral analysis (FFT)](#spectral-analysis-FFT-)
-    * [Digital low pass filtering (bass)](#digital-low-pass-filtering-bass-)
+    * [Spectral analysis (FFT)](#spectral-analysis-FFT)
+    * [Digital low pass filtering (bass)](#digital-low-pass-filtering-bass)
     * [Beat detection](#beat-detection)
   * [Debugging](#debugging)
 
