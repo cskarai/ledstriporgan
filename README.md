@@ -21,6 +21,7 @@
     * [Energy calculation](#energy-calculation)
     * [Spectral analysis (FFT)](#spectral-analysis-fft)
     * [Digital low pass filtering (bass)](#digital-low-pass-filtering-bass)
+    * [Bass energy calculation](#bass-energy-calculation)
     * [Beat detection](#beat-detection)
   * [Debugging](#debugging)
 
@@ -165,7 +166,13 @@ Response of the digital filter:
 
 ![Low pass filter](docs/images/lowpass_chr.png)
 
-The LED intensity of 'bass peak bulb' is computed from low pass filter.
+### Bass energy calculation
+
+Bass energy is computed the same way as sound energy, using the last 20 frames bass averages:
+
+![Sample avg](docs/images/math_bass_energy.png)
+
+Beat detection and 'bass peak bulb' intensity are computed from bass energy.
 
 ### Beat detection
 
