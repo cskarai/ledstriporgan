@@ -19,7 +19,7 @@
     * [Sampling and frames](#sampling-and-frames)
     * [Mono conversion](#mono-conversion)
     * [Energy calculation](#energy-calculation)
-    * [Spectral analysis (FFT)](#spectral-analysis-FFT)
+    * [Spectral analysis (FFT)](#spectral-analysis-fft)
     * [Digital low pass filtering (bass)](#digital-low-pass-filtering-bass)
     * [Beat detection](#beat-detection)
   * [Debugging](#debugging)
