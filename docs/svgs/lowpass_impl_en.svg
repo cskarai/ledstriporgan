@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="lowpass_impl.svg"
+   sodipodi:docname="lowpass_impl_en.svg"
    inkscape:export-filename="/home/ckarai/avr/arduino/projects/LedStripOrgan/docs/ledstrip_en.png"
    inkscape:export-xdpi="149.65976"
    inkscape:export-ydpi="149.65976">
@@ -483,7 +483,7 @@
          sodipodi:role="line"
          id="tspan4818-6-6"
          x="70.175316"
-         y="65.008621">Frame 1-128 samples</tspan></text>
+         y="65.008621">Frame 1/128 samples</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.98908305;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 165.84988,54.534416 0,15.010916 99.81092,0 0,-15.010916 -99.81092,0 z"
@@ -504,7 +504,7 @@
          sodipodi:role="line"
          id="tspan4818-6-6-2"
          x="173.87799"
-         y="63.535519">Frame 2-128 samples</tspan></text>
+         y="63.535519">Frame 2/128 samples</tspan></text>
     <path
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.99003732;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 265.85036,54.534893 0,15.009962 100.00996,0 0,-15.009962 -100.00996,0 z"
@@ -525,7 +525,7 @@
          sodipodi:role="line"
          id="tspan4818-6-6-2-2"
          x="276.15341"
-         y="63.535515">Frame 3-128 samples</tspan></text>
+         y="63.535515">Frame 3/128 samples</tspan></text>
     <path
        style="fill:#c8c8ff;fill-opacity:1;stroke:#000000;stroke-width:1.13558185;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 32.815278,39.828221 0,14.864418 132.864422,0 0,-14.864418 -132.864422,0 z"
@@ -545,7 +545,7 @@
          sodipodi:role="line"
          id="tspan4818-6-6-9-0"
          x="37.067463"
-         y="49.961128">Bass average 1-170 samples</tspan></text>
+         y="49.961128">Bass average 1/170 samples</tspan></text>
     <path
        style="fill:#c8c8ff;fill-opacity:1;stroke:#000000;stroke-width:1.13558185;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 232.90842,9.9098053 0,14.8644157 132.86442,0 0,-14.8644157 -132.86442,0 z"
@@ -572,7 +572,7 @@
          sodipodi:role="line"
          id="tspan4818-6-6-9-6"
          x="137.83018"
-         y="35.578808">Bass average 2-170 samples</tspan></text>
+         y="35.578808">Bass average 2/170 samples</tspan></text>
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:9.625px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
@@ -585,7 +585,7 @@
          sodipodi:role="line"
          id="tspan4818-6-6-9-7"
          x="237.28687"
-         y="20.184488">Bass average 3-170 samples</tspan></text>
+         y="20.184488">Bass average 3/170 samples</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:1, 2;stroke-dashoffset:0;stroke-opacity:1"
        d="m 365.828,-0.97435587 0,85.35788987"
