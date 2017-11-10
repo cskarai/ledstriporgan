@@ -1,0 +1,25 @@
+<svg height="130" width="210">
+  <line x1="35" y1="5" x2="35" y2="110" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="30" y1="105" x2="200" y2="105" style="stroke:rgb(0,0,0);stroke-width:2" />
+
+  <line x1="30" y1="6" x2="35" y2="6" style="stroke:rgb(0,0,0);stroke-width:2" />
+
+  <line x1="36" y1="6" x2="200" y2="6" style="stroke:rgb(224,224,224);stroke-width:2" />
+  <line x1="85" y1="5" x2="85" y2="104" style="stroke:rgb(224,224,224);stroke-width:2" />
+  <line x1="85" y1="105" x2="85" y2="110" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="135" y1="5" x2="135" y2="104" style="stroke:rgb(224,224,224);stroke-width:2" />
+  <line x1="135" y1="105" x2="135" y2="110" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="185" y1="5" x2="185" y2="104" style="stroke:rgb(224,224,224);stroke-width:2" />
+  <line x1="185" y1="105" x2="185" y2="110" style="stroke:rgb(0,0,0);stroke-width:2" />
+  <line x1="36" y1="35" x2="200" y2="35" style="stroke:rgb(224,224,224);stroke-width:1" />
+
+  <path d="M35 6 L36 6 L37 6 L38 6 L39 6 L40 7 L41 7 L42 7 L43 7 L44 7 L45 7 L46 8 L47 8 L48 8 L49 9 L50 9 L51 9 L52 10 L53 10 L54 11 L55 11 L56 12 L57 12 L58 13 L59 14 L60 14 L61 15 L62 16 L63 17 L64 18 L65 20 L66 21 L67 22 L68 24 L69 26 L70 28 L71 30 L72 32 L73 34 L74 37 L75 39 L76 42 L77 45 L78 49 L79 52 L80 56 L81 60 L82 62 L83 68 L84 72 L85 77 L86 82 L87 86 L88 92 L89 96 L90 100 L91 101 L92 99 L93 95 L94 91 L95 88 L96 86 L97 84 L98 83 L99 84 L100 85 L101 86 L102 89 L103 93 L104 97 L105 101 L106 103 L107 99 L108 96 L109 93 L110 92 L111 93 L112 95 L113 98 L114 103 L115 103 L116 99 L117 96 L118 96 L119 98 L120 101 L121 104 L122 100 L123 98 L124 99 L125 102 L126 103 L127 100 L128 99 L129 102 L130 103 L131 100 L132 101 L133 104 L134 101 L135 102 L136 104 L137 101 L138 103 L139 102 L140 102 L141 103 L142 102 L143 104 L144 103 L145 103 L146 103 L147 103 L148 105 L149 103 L150 103 L151 104 L152 104 L153 103 L154 103 L155 103 L156 104 L157 104 L158 104 L159 104 L160 104 L161 104 L162 104 L163 105 L164 104 L165 104 L166 105 L167 104 L168 104 L169 105 L170 104 L171 104 L172 104 L173 104 L174 104 L175 104 L176 105 L177 104 L178 105 L179 104 L180 105 L181 105 L182 105 L183 105 L184 104 L185 105 L186 105 L187 104 " style="stroke:rgb(0,0,255);stroke-width:2;fill:none;stroke-linejoin:round" />
+  
+  <text x="25" y="9" font-family="Arial" text-anchor="end" font-size="8">100%</text>
+  <text x="25" y="108" font-family="Arial" text-anchor="end" font-size="8">0%</text>
+  <text x="35" y="123" font-family="Arial" text-anchor="middle" font-size="8">20 Hz</text>
+  <text x="85" y="123" font-family="Arial" text-anchor="middle" font-size="8">200 Hz</text>
+  <text x="135" y="123" font-family="Arial" text-anchor="middle" font-size="8">2000 Hz</text>
+  <text x="185" y="123" font-family="Arial" text-anchor="middle" font-size="8">20000 Hz</text>
+  Sorry, your browser does not support inline SVG.
+</svg>

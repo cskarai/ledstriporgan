@@ -154,7 +154,18 @@ The LED intensity of 'spectral peak bulb' and 'rgb bulb' is computed from the fr
 
 ### Digital low pass filtering (bass)
 
-TODO
+Bass curve (low pass curve) is calculated from the average of the last 170 samples (moving average filter).
+A frame contains 128 samples, so 42 samples of the previous frame is also used at calculation.
+
+![Low pass implementation](docs/images/lowpass_impl_en.png)
+
+The cutoff frequency of this moving average filter is around 120 Hz, which is good enough to separate bass from the music.
+
+Response of the digital filter:
+
+![Low pass filter](docs/images/lowpass_chr.png)
+
+The LED intensity of 'bass peak bulb' is computed from low pass filter.
 
 ### Beat detection
 
