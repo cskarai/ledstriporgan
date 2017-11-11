@@ -361,8 +361,8 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="5.6"
-     inkscape:cx="168.07328"
+     inkscape:zoom="0.7"
+     inkscape:cx="166.64471"
      inkscape:cy="388.23943"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -465,7 +465,10 @@ qv8CxQujzFI43s4AAAAASUVORK5CYII=
 "
        preserveAspectRatio="none"
        height="464.31818"
-       width="708.75" />
+       width="708.75"
+       inkscape:export-filename="/home/ckarai/src/ledstriporgan/docs/images/beat_state_en.png"
+       inkscape:export-xdpi="74"
+       inkscape:export-ydpi="74" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:22px;line-height:125%;font-family:Sans;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
