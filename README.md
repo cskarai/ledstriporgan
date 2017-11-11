@@ -142,7 +142,7 @@ The sampling frequency is 44100Hz, the spectral resolution is 44100/128 = 344 Hz
 
 Grouping the bands:
 
-| Group |  Bands |      Frequency      |
+| Group  |  Bands |      Frequency      |
 |:------:|:------:|:-------------------:|
 |   1    |    1   |   344 Hz - 689 Hz   |
 |   2    |   2-3  |   689 Hz - 1378 Hz  |
@@ -176,7 +176,27 @@ Beat detection and 'bass peak bulb' intensity are computed from bass energy.
 
 ### Beat detection
 
-TODO
+Beats are rapid energy bursts on the bass frequencies.
+
+![Beat detection](docs/images/beat_detect_en.png)
+
+**Criterias for a beat**:
+* A beat must be higher than sum of the average bass energy and a specified threshold (300)
+* A beat must be higher than the minimal bass energy (in a window) multiplied by a specified ratio (1.75)
+* A beat must be sudden, gradual energy increase should not be detected as a beat
+* Only one beat is detected for an energy peak
+* There's time constraint for subsequential beats to follow each others
+
+**Beat states**:
+* No beat
+* Rising beat
+* Waiting for fall
+* Disabled beat period
+
+Image:
+
+![Beat states](docs/images/beat_state_en.png)
+
 
 ## Debugging
 
