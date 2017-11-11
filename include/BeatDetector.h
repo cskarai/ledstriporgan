@@ -45,6 +45,7 @@ class BeatDetector
 
     bool      hasBeat(AudioAnalyzer & analyzer);
     uint32_t  getBeatState() { return beatState; }
+    int32_t   getMagnitude() { return magnitude; }
     bool      isBeat() { return beat; }
 };
 

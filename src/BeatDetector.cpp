@@ -54,19 +54,16 @@ void BeatDetector::addToHistory(uint32_t strength)
 
 bool BeatDetector::hasBeat(AudioAnalyzer & analyzer)
 {
-	addToHistory(analyzer.getBassStrength());
+	addToHistory(analyzer.getBassEnergy());
 
 	lastMagnitude = magnitude;
-	magnitude = analyzer.getBassStrength() - historyAvg;
+	magnitude = analyzer.getBassEnergy() - historyAvg;
 
 	switch( beatState )
 	{
 	case NO_BEAT:
-		if( (magnitude > 0) && ( magnitude > lastMagnitude ) && ( analyzer.getBassStrength() >=  BEAT_MIN_OVERHEAD * (uint32_t)historyMin / 16 ) )
+		if( (magnitude >= BEAT_MIN_STRENGTH) && ( magnitude > lastMagnitude ) && ( analyzer.getBassEnergy() >=  BEAT_MIN_OVERHEAD * (uint32_t)historyMin / 16 ) )
 		{
-			if( magnitude < BEAT_MIN_STRENGTH )
-				break;
-
 			waitCnt = 0;
 			beatState = IN_BEAT;
 			beatStartMagnitude = beatRiseMagnitude = magnitude;

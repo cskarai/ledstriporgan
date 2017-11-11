@@ -18,7 +18,7 @@ void BassPeakBulb::processNewFrame(AudioAnalyzer & analyzer)
 
 	peakEnergy = peakEnergy * 8 / 9;
 
-	uint32_t energy = analyzer.getBassStrength();
+	uint32_t energy = analyzer.getBassEnergy();
 	if( (energy > ENERGY_LIMIT) && ( energy > peakMax ) ) {
 		peakEnergy = 255;
 		peakMax = energy;

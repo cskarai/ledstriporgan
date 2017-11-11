@@ -94,12 +94,12 @@ void AudioAnalyzer::processData(uint32_t * data, uint32_t count)
 	}
 	bassAvg /= BASS_WINDOW_SIZE;
 
-	bassStrength = 0;
+	bassEnergy = 0;
 	for(int i=0; i < BASS_WINDOW_SIZE; i++) {
 		int diff = bassWindow[i] - bassAvg;
-		bassStrength += diff * diff;
+		bassEnergy += diff * diff;
 	}
-	bassStrength = isqrt(bassStrength);
+	bassEnergy = isqrt(bassEnergy);
 }
 
 void AudioAnalyzer::computeFFT()

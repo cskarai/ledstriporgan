@@ -27,7 +27,7 @@ private:
 	uint32_t      rightAvg = 0;
 	uint32_t      avg = 0;
 
-	uint32_t      bassStrength = 0;
+	uint32_t      bassEnergy = 0;
 	uint32_t      bassCurve = 0;
 	uint32_t      bassRemnant = 0;
 
@@ -65,10 +65,10 @@ public:
 	uint16_t getFFTBandMax(int band) { return fftBandMax[band]; }
 	uint16_t getFFTBand(int band) { return fftBand[band]; }
 
-	uint32_t getBassStrength() { return bassStrength; }
-	uint32_t getBassCurve() { return bassCurve; }
+	uint32_t getBassEnergy()  { return bassEnergy; }
+	uint32_t getBassCurve()   { return bassCurve; }
 
-	uint16_t * getSamples() { return samples; }
+	uint16_t * getSamples()   { return samples; }
 };
 
 extern AudioAnalyzer audioAnalyzer;
