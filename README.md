@@ -200,4 +200,46 @@ Image:
 
 ## Debugging
 
-TODO
+It's possible to debug the LED Strip Organ using an USB-UART converter. Not every converter is good for this purpose as data is transmitted on 2000000 baud (2 mbaud). The PL2303, CH340G or FTDI chipsets are able to receive data at this rate, but it's a problem for CP2102 chipsets. Fast USB-UART converter and quiet USB bus is required for debugging (don't start copying files to an USB SD card to decrease the bandwith of the bus).
+
+Transmitted UART frame format:
+
+| Byte  | Purpose       | Details                                                  |
+|:-----:|:--------------|:---------------------------------------------------------|
+| 0-4   | magic         | 0xC50EDAB1 bytes indicating start of the UART frame      |
+| 5-6   | average       | The average value of the frame (average of 128 samples)  |
+| 7     | frame         | The lower 8 bit of the frame number                      |
+| 8     | flags         | Bit 7: whether beat is detected, bit 0-2: beat state     |
+| 9-10  | bassEnergy    | The calculated energy of bass frequencies                |
+| 10-11 | bassCurve     | The output of the low pass filter                        |
+| 12-13 | beatMagnitude | Magnitude value in the beat detector                     |
+| 14-77 | samples       | 32 x 16 bit samples (music downsampled to 11025Hz mono ) |
+
+
+<br/>
+Start UART listening on Linux:
+
+```
+cd test
+./serialread.sh
+```
+
+This will save data to 'data.bin' file.
+
+```
+./decode_frames.pl
+```
+
+This script will create 5 wave files from the received data.
+
+| File                     | Description                                                                                                         |
+|:-------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| output_1_music.wav       | Music downsampled to 11025 Hz mono. Useful to check the data received by the tool. One can listen it with Audacity. |
+| output_2_bass_curve.wav  | The output of the low pass filter. One can listen the filtered music with Audacity.                                 |
+| output_3_bass_energy.wav | The energy of the bass frequencies.                                                                                 |
+| output_4_beat_state.wav  | Beat state information                                                                                              |
+| output_5_beat.wav        | Whether beat is detected                                                                                            |
+
+**Decoded tracks on Audacity:**
+
+![Audacity tracks](docs/images/audacity_tracks.png)
