@@ -84,23 +84,25 @@ A panel:
 
 ## Használat
 
-TODO
-
 ### Fordítás és telepítés
 
-TODO
+A projekt Eclipse fejlesztő-környezetet használ GNU ARM Eclipse pluginnal és openocd-vel. A kódot ST-LINK-kel lehet feltölteni a mikrovezérlőre.
+
+A vezérlő típusa STM32F103 (blue pill panel):
+
+![Blue pill](docs/images/blue_pill.png)
 
 ### Földhurok leválasztó kapcsoló
 
-TODO
+Az audio földet és az STM32 földjét DIP kapcsoló köti össze. A kapcsolót be kell kapcsolni, amikor az audio és a mikrovezérlő külön földet használ (pl. a táp USB töltőről jön, a zene HiFi-ről).
+Ha ugyanazt a földet használják (számítógép USB portról jön a táp és a zene is a számítógépről jön), akkor a kapcsolót ki kell kapcsolni, hogy a földhurok ne okozzon problémát.
 
 ### Megfelelő hangerő kiválasztása
 
-TODO
+A program nem tudja kitalálni, hogy egy szám éppen halk-e, vagy csak a hangerő van lehúzva. A szalag megfelelően beállított hangerő mellett lesz a legszebb, amikor az audio jel [-1.5V, 1.5V] között van.
+Én 95%-ra állítottam a hangerőt, hogy a legnagyobb kimenő feszültségeket adja, de még ne kezdjen torzítani se. Ez a megkötés nem túl erős, mert olcsón USB-s hangkártyát is lehet kapni, ami lehetővé teszi a LED szalag és a hangszóró hangerejének külön történő beállítását.
 
 ## Jelfeldolgozás
-
-TODO
 
 ### Mintavételezés és keretek (frame-k)
 
