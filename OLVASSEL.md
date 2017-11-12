@@ -106,15 +106,32 @@ A program nem tudja kitalálni, hogy egy szám éppen halk-e, vagy csak a hanger
 
 ### Mintavételezés és keretek (frame-k)
 
-TODO
+Az áramkör a zenét 44100 Hz-en mintavételezi sztereóban, az STM32 ADC1/ADC2 moduljaival.
+
+A jelet 128 mintás keretekre (frame) osztjuk, ezek a keretek határozzák majd meg az egyes LED-ek színét.
 
 ### Mono átalakítás
 
-TODO
+A könnyebb kezelhetőség végett a jelet monóba alakítjuk a következő képlet alapján:
+
+![Mono](docs/images/math_mono_hu.png)
 
 ### Jelenergia számítás
 
-TODO
+A jelenergia számításához szükséges a mintaátlag:
+
+![Sample avg](docs/images/math_avg_hu.png)
+
+  * s[i] az egyes mintákat jelöli
+  * i0 a keret első elemének indexe
+
+<br/>
+
+A jelenergiát a következő képlet adja:
+
+![Sample avg](docs/images/math_energy_hu.png)
+
+Az 'Energia-mérő LED' és az 'Energiacsúcs-mérő LED' intenzitását számoljuk ezzel az értékkel.
 
 ### Spektrum analízis (FFT)
 

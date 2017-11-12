@@ -1,0 +1,4 @@
+Ch_{mono} = { Ch_{"left"} + Ch_{"right"} }  over 2
+s_{avg} = { sum from{i_{0}} to {i_{0} + 127} { s_[i] } } over 128
+E = sqrt{ { sum from{i_{0}} to{i_{0} + 127} { ( s_[i] -s_{avg} ) ^{2} } } over 128 }
+E_{bass} = sqrt{ { sum from{i_{0} - 19} to{i_{0}} { ( s_{bass}[i] -s_{bassavg} ) ^{2} } } over 20 }

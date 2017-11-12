@@ -116,13 +116,13 @@ Each bulb on is controlled by frames created from 128-sample chunks.
 
 For easier handling the tool converts 44.1 kHz stereo music to mono using the following formula:
 
-![Mono](docs/images/math_mono.png)
+![Mono](docs/images/math_mono_en.png)
 
 ### Energy calculation
 
 The energy of the frame is calculated from the sample average:
 
-![Sample avg](docs/images/math_avg.png)
+![Sample avg](docs/images/math_avg_en.png)
 
   * s[i] is the value of the sampled music
   * i0 is the start sample index of the frame
@@ -131,7 +131,7 @@ The energy of the frame is calculated from the sample average:
 
 The following formula will give the energy:
 
-![Sample avg](docs/images/math_energy.png)
+![Sample avg](docs/images/math_energy_en.png)
 
 This value is used for calculating the LED intensity of 'energy bulb' and 'energy peak bulb'.
 
@@ -170,7 +170,7 @@ Response of the digital filter:
 
 Bass energy is computed the same way as sound energy, using the last 20 frames bass averages:
 
-![Sample avg](docs/images/math_bass_energy.png)
+![Sample avg](docs/images/math_bass_energy_en.png)
 
 Beat detection and 'bass peak bulb' intensity are computed from bass energy.
 

@@ -1,0 +1,4 @@
+Cs_{mono} = { Cs_{"jobb"} + Cs_{"bal"} }  over 2
+s_{"átlag"} = { sum from{i_{0}} to {i_{0} + 127} { s_[i] } } over 128
+E = sqrt{ { sum from{i_{0}} to{i_{0} + 127} { ( s_[i] -s_{"átlag"} ) ^{2} } } over 128 }
+E_{basszus} = sqrt{ { sum from{i_{0} - 19} to{i_{0}} { ( s_{basszus}[i] -s_{basszusátlag} ) ^{2} } } over 20 }
