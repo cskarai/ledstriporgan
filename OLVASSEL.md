@@ -62,11 +62,11 @@ A háttérszín LED-ek folyamatosan világítanak, színt váltanak amikor a mik
 
 ### Kapcsolási rajz
 
-![Schema](docs/schema.png)
+![Schema](docs/images/schema.png)
 
 ### Nyák-terv
 
-![PCB Design](docs/pcb_design.png)
+![PCB Design](docs/images/pcb_design.png)
 
 ### Fényképek az elkészült panelről
 
