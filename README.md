@@ -41,7 +41,7 @@ Youtube video:
 ## Controlling the LEDs (bulbs)
 The color schema of the LED-s (bulbs):
 
-![LED color scheme](docs/images/ledstrip.png)
+![LED color scheme](docs/images/ledstrip_en.png)
 
 ### Background bulb
 The background LEDs give permanent light and change color when STM32 detects beat. Those LEDs are for giving light even if music is not played.
