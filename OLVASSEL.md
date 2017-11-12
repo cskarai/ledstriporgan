@@ -7,8 +7,8 @@
   * [LED-ek vezérlése](#led-ek-vezérlése)
     * [Háttérszín LED-ek](#háttérszín-led-ek)
     * [Effekt LED-ek](#effekt-led-ek)
-  * [Kapcsolási rajz](#kapcsolási-rajz)
-    * [Áramkör](#Áramkör)
+  * [Az áramkör](#az-áramkör)
+    * [Kapcsolási rajz](#kapcsolási-rajz)
     * [Nyák-terv](#nyák-terv)
     * [Fényképek az elkészült panelről](#fényképek-az-elkészült-panelről)
   * [Használat](#használat)
@@ -58,21 +58,29 @@ A háttérszín LED-ek folyamatosan világítanak, színt váltanak amikor a mik
 | 5. / A | RGB&nbsp;villogó&nbsp;(1,4,6)                      | A LED színe a frekvenciaintervallumok alapján számolódik, az (1,4,6) intervallumok a vörös, zöld, kék komponenseket határozzák meg. |
 | 5. / B | RGB&nbsp;villogó&nbsp;(5,3,2)                      | A LED színe a frekvenciaintervallumok alapján számolódik, az (5,3,2) intervallumok a vörös, zöld, kék komponenseket határozzák meg. |
 
-## Kapcsolási rajz
+## Az áramkör
 
-TODO
+### Kapcsolási rajz
 
-### Áramkör
-
-TODO
+![Schema](docs/schema.png)
 
 ### Nyák-terv
 
-TODO
+![PCB Design](docs/pcb_design.png)
 
 ### Fényképek az elkészült panelről
 
-TODO
+Így néz ki kívülről:
+
+[![Enclosure2](docs/images/thm_photo_enclosure2.png)](docs/images/photo_enclosure2.png) [![Enclosure1](docs/images/thm_photo_enclosure1.png)](docs/images/photo_enclosure1.png)
+
+Ha felnyitjuk a fedelét:
+
+[![Inside](docs/images/thm_photo_inside.png)](docs/images/photo_inside.png)
+
+A panel:
+
+[![PCB top](docs/images/thm_photo_pcb_top.png)](docs/images/photo_pcb_top.png) [![PCB bottom](docs/images/thm_photo_pcb_bottom.png)](docs/images/photo_pcb_bottom.png)
 
 ## Használat
 
