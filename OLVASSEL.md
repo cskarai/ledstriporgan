@@ -135,15 +135,45 @@ Az 'Energia-mérő LED' és az 'Energiacsúcs-mérő LED' intenzitását számol
 
 ### Spektrum analízis (FFT)
 
-TODO
+A program a 128 mintás kereteket frekvenciatartományba alakítja FFT-vel. Minthogy a mintavételi frekvencia 44100 Hz, a felbontás
+44100 / 128 = 344 Hz lesz (a teljes tartományt 64 zsákra osztjuk 344 Hz-enként).
+
+Zsákok csoportosítása:
+
+| Csoport |  Zsák  |      Frekvencia     |
+|:-------:|:------:|:-------------------:|
+|    1    |    1   |   344 Hz - 689 Hz   |
+|    2    |   2-3  |   689 Hz - 1378 Hz  |
+|    3    |   4-7  |  1378 Hz - 2756 Hz  | 
+|    4    |  8-15  |  2756 Hz - 5513 Hz  | 
+|    5    | 16-31  |  5513 Hz - 11025 Hz | 
+|    6    | 32-63  | 11025 Hz - 22050 Hz | 
+
+A 'Spektrumcsúcs-mérő LED' és az 'RGB villogó' színét számoljuk frekvencia csoportok alapján.
+
 
 ### Aluláteresztő (basszus) szűrés
 
-TODO
+A basszus görbét (aluláteresztő görbe) a legutolsó 170 minta átlaga alapján számoljuk (mozgóátlag).
+Mivel egy keret csak 128 mintát tartalmaz, ezért az előző keret utolsó 42 mintáját is felhasználjuk a számoláshoz.
+
+![Low pass implementation](docs/images/lowpass_impl_hu.png)
+
+Az így kapott szűrő vágási frekvenciája 120 Hz körül van, ami elég jó ahhoz, hogy a mély hangokat leválasszuk a zenéről.
+
+A szűrő válasza különféle frekvenciákra:
+
+![Low pass filter](docs/images/lowpass_chr.png)
+
 
 ### Basszus energia számítás
 
-TODO
+A basszus energiát a jelenergiához hasonlóan számoljuk az utolsó 20 keret mozgóátlagaiból:
+
+![Bass energy](docs/images/math_bass_energy_hu.png)
+
+A beat érzékelést és a 'Basszuscsúcs-mérő LED' intenzitását számoljuk ebből az értékből.
+
 
 ### Beat érzékelés
 
