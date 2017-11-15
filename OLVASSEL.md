@@ -177,7 +177,27 @@ A beat érzékelést és a 'Basszuscsúcs-mérő LED' intenzitását számoljuk 
 
 ### Beat érzékelés
 
-TODO
+A beat-ek gyors energia-ugrások a basszus frekvenciákon:
+
+![Beat detection](docs/images/beat_detect_hu.png)
+
+**Követelmények egy beatre**:
+* A beatnek nagyobbnak kell lennie, mint a basszus energia átlag és egy hozzáadott küszöbérték (300)
+* Adott időintervallumon a legkisebb és legnagyobb basszus energia közti aránynak el kell érni egy megadott értéket (1.75X)
+* Egy beat gyorsan történik, a fokozatos energiaemelkedést nem tekinthetjük beatnek
+* Egy basszus energia-csúcshoz egy beat tartozhat
+* Két beat között egy adott időnek el kell telnie, nem követhetik egymás tetszőleges gyorsan
+
+**Beat állapotok**:
+* Nincs beat
+* Beat felfutása
+* Várakozás lecsengésre
+* Beat tiltva
+
+Kép:
+
+![Beat states](docs/images/beat_state_hu.png)
+
 
 ## Nyomkövetés
 
