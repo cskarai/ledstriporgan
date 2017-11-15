@@ -201,4 +201,47 @@ Kép:
 
 ## Nyomkövetés
 
-TODO
+A LED szalag orgona USB-UART átalakítóval nyomkövethető. Nem minden átalakító használható erre a célra, mert az adatok átviteli sebessége magas, 2000000 baud (2 mbaud). A PL2303, CH340G, FTDI chipek képesek ilyen sebesség melletti adatátvitelre, a CP2102 nem. Gyors USB-UART konverter és csöndes USB busz szükséges a nyomkövetéshez (nem érdemes USB SD kártyára fájlokat másolni nyomkövetés közben, mert ez lecsökkenti a busz sávszélességét).
+
+
+Az elküldött UART csomag formája:
+
+| Byte  | Feladat         | Részletes leírás                                         |
+|:-----:|:----------------|:---------------------------------------------------------|
+| 0-4   | azonosító       | 0xC50EDAB1 byte-ok az UART csomag kezdetét jelölik       |
+| 5-6   | átlag           | a kerethez tartozó átlagérték (128 mintából véve)        |
+| 7     | keret szám      | a keretszám alsó 8 bitje                                 |
+| 8     | jelzőbitek      | bit 7: beat érzékelés, bit 0-2: beat állapot             |
+| 9-10  | basszus energia | a kiszámolt basszus energia                              |
+| 10-11 | basszus görbe   | az aluláteresztő szűrő kimenete                          |
+| 12-13 | beat nagyság    | beat érzékeléshez használt beat nagyság értéke           |
+| 14-77 | minták          | 32 x 16 bites minták (a zene 11025Hz monóba alakítva)    |
+
+
+<br/>
+UART hallgatás Linux-on:
+
+```
+cd test
+./serialread.sh
+```
+
+Ez az adatokat a 'data.bin' fájlba fogja menteni.
+
+```
+./decode_frames.pl
+```
+
+A fenti parancs 5 wave fájlt fog előállítani a kapott adatokból:
+
+| Fájl                     | Jelentése                                                                                                           |
+|:-------------------------|:--------------------------------------------------------------------------------------------------------------------|
+| output_1_music.wav       | A zene 11025 Hz monóba alakítva. Hasznos, mert bele lehet hallgatni, hogy mit hallott az eszköz mintavételezésnél   |
+| output_2_bass_curve.wav  | Az aluláteresztő szűrő kimenete. Bele lehet hallgatni, hogy mi jön át szűrés után                                   |
+| output_3_bass_energy.wav | A basszus energia                                                                                                   |
+| output_4_beat_state.wav  | Beat állapot információ                                                                                             |
+| output_5_beat.wav        | Jelző, hogy beat-et érzékelt-e az eszköz                                                                            |
+
+**A dekódolt sávok Audacity-n:**
+
+![Audacity tracks](docs/images/audacity_tracks.png)

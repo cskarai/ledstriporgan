@@ -208,7 +208,7 @@ Transmitted UART frame format:
 |:-----:|:--------------|:---------------------------------------------------------|
 | 0-4   | magic         | 0xC50EDAB1 bytes indicating start of the UART frame      |
 | 5-6   | average       | The average value of the frame (average of 128 samples)  |
-| 7     | frame         | The lower 8 bit of the frame number                      |
+| 7     | frameNumber   | The lower 8 bit of the frame number                      |
 | 8     | flags         | Bit 7: whether beat is detected, bit 0-2: beat state     |
 | 9-10  | bassEnergy    | The calculated energy of bass frequencies                |
 | 10-11 | bassCurve     | The output of the low pass filter                        |
