@@ -35,7 +35,7 @@ This was the 90's, but nowadays much better equipments can be made from fewer mo
 
 Youtube video:
 
-[![LED strip organ video](docs/images/youtube-video.png)](https://www.youtube.com/watch?v=_tZMUPP6Tb4 "LED strip organ")
+[![LED strip organ video](https://img.youtube.com/vi/2DC7uQUITys/0.jpg)](https://www.youtube.com/watch?v=2DC7uQUITys "LED strip organ")
 
 
 ## Controlling the LEDs (bulbs)

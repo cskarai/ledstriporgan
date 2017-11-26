@@ -33,7 +33,7 @@ Ez a világ a 90-es évek volt, ma már sokkal ütősebb eszközök készíthet�
 
 Youtube videó:
 
-[![LED strip organ video](docs/images/youtube-video.png)](https://www.youtube.com/watch?v=_tZMUPP6Tb4 "LED strip organ")
+[![LED strip organ video](https://img.youtube.com/vi/2DC7uQUITys/0.jpg)](https://www.youtube.com/watch?v=2DC7uQUITys "LED strip organ")
 
 ## LED-ek vezérlése
 
